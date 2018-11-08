@@ -46,8 +46,8 @@ def main():
         asyncdns.IPV6_CONNECTION_SUPPORT = False
 
     daemon.daemon_exec(config)
-    logging.info("local start with protocol[%s] protocol_param[%s] password [%s] method [%s] obfs [%s] obfs_param [%s]" %
-            (config['protocol'], config['protocol_param'], config['password'], config['method'], config['obfs'], config['obfs_param']))
+    logging.info("local start with server[%s] server_port[%s] local_address[%s] local_port[%s] password [%s] method [%s] protocol[%s] protocol_param[%s] obfs [%s] obfs_param [%s]" %
+            (config['server'], config['server_port'], config['local_address'], config['local_port'], config['password'], config['method'], config['protocol'], config['protocol_param'], config['obfs'], config['obfs_param']))
 
     try:
         logging.info("starting local at %s:%d" %
